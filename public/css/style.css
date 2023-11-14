@@ -3,12 +3,12 @@ body {
   margin-top: 6em;
   display: flex;
   flex-direction: column;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   text-align: center;
   font-weight: bold;
   color: rgb(244, 232, 207);
-  text-shadow: 0 0 .2rem white;
-  background-color: black;
+  text-shadow: 0 0 0.2rem #fff;
+  background-color: #000;
 }
 
 html,
@@ -20,7 +20,7 @@ h1 {
   font-size: 5em;
   text-align: center;
   color: rgb(244, 232, 207);
-  -webkit-text-stroke: 1px white;
+  -webkit-text-stroke: 1px #fff;
 }
 
 h2 {
@@ -30,18 +30,18 @@ h2 {
 
 h3,
 h4 {
-  font-family: 'Lato', sans-serif;
-  font-size: .7em;
+  font-family: "Lato", sans-serif;
+  font-size: 0.7em;
 }
 
 p {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   color: rgb(244, 232, 207);
   font-weight: normal;
   letter-spacing: 0.03em;
-  font-size: .7em !important;
+  font-size: 0.7em !important;
   line-height: 1em;
-  text-shadow: 0 0 .3rem black;
+  text-shadow: 0 0 0.3rem #000;
 }
 
 img {
@@ -54,12 +54,12 @@ img {
 body.home {
   display: flex;
   flex-direction: column;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   text-align: center;
   font-weight: bold;
   color: rgb(244, 232, 207);
-  text-shadow: 0 0 .1rem rgb(244, 232, 207);
-  background-color: black;
+  text-shadow: 0 0 0.1rem rgb(244, 232, 207);
+  background-color: #000;
   background-image: url("https://live.staticflickr.com/65535/50243040877_a95ca8b6c8_k.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -70,15 +70,15 @@ body.home {
 
 body.home h1 {
   color: #ed8d00;
-  -webkit-text-stroke: 1px white;
-  margin-top: .5em;
+  -webkit-text-stroke: 1px #fff;
+  margin-top: 0.5em;
 }
 
 body.home h2 {
   font-size: 4.4em;
   color: #ed8d00 !important;
-  text-shadow: 0 0 .3rem #000000;
-  -webkit-text-stroke: 1px white;
+  text-shadow: 0 0 0.3rem #000;
+  -webkit-text-stroke: 1px #fff;
 }
 
 /* gallery view */
@@ -92,20 +92,20 @@ body.gallery {
 
 body.gallery h1 {
   color: rgb(244, 232, 207);
-  text-shadow: 0 0 .3rem black;
-  -webkit-text-stroke: 1px white;
+  text-shadow: 0 0 0.3rem #000;
+  -webkit-text-stroke: 1px #fff;
 }
 
 body.gallery h2 {
   font-size: 1.1em;
   color: rgb(244, 232, 207) !important;
-  text-shadow: 0 0 .3rem black;
+  text-shadow: 0 0 0.3rem #000;
 }
 
 body.gallery p {
-  font-size: .8em !important;
+  font-size: 0.8em !important;
   color: rgb(244, 232, 207) !important;
-  text-shadow: 0 0 .3rem black;
+  text-shadow: 0 0 0.3rem #000;
 }
 
 a img {
@@ -135,7 +135,7 @@ a:hover img {
 
 /* specific to gallery */
 .show-row {
-  background-color: rgb(22, 22, 22, 0.65);
+  background-color: rgba(22, 22, 22, 0.65);
 }
 
 /* applies to both gallery and show view */
@@ -156,13 +156,13 @@ body.show {
 
 body.show h1 {
   color: rgb(244, 232, 207);
-  -webkit-text-stroke: 1px white;
+  -webkit-text-stroke: 1px #fff;
 }
 
 body.show p {
-  font-size: .7em !important;
+  font-size: 0.7em !important;
   color: rgb(244, 232, 207) !important;
-  text-shadow: 0 0 .3rem black;
+  text-shadow: 0 0 0.3rem #000;
 }
 
 .img-fluid {
@@ -172,202 +172,169 @@ body.show p {
 
 .col-md-4 img {
   height: 70vh !important;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .col-md-8 {
   margin: 0 auto;
-  padding: .75rem;
+  padding: 0.75rem;
   font-size: 1.3rem;
 }
 
 /* different viewport size adjustments */
 @media (min-width: 768px) {
-
   .col-md-4,
   .col-md-8 {
     width: 50%;
   }
 }
-
 @media (max-width: 992px) {
   .col-md-4 img {
     height: 60vh !important;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }
-
 @media (max-width: 767px) {
   .col-md-4 img {
     height: 50vh !important;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }
-
 @media (min-width: 1401px) {
   h1 {
     font-size: 5em !important;
   }
-
   h2 {
     font-size: 3.5em !important;
   }
-
   body.show h1,
   body.gallery h1,
   body.error404 h1 {
     font-size: 3.5em !important;
   }
-
   body.gallery h2 {
     font-size: 1.1em !important;
   }
-
   body.show p {
     font-size: 1.5em !important;
   }
-
   body.show img {
     height: 80vh;
   }
-
   .show-row {
     text-align: center;
     margin-left: 10em;
     margin-right: 10em;
   }
 }
-
 @media (max-width: 1400px) {
   h1 {
     font-size: 4.5em !important;
   }
-
   h2 {
     font-size: 3em !important;
   }
-
   body.show p {
     font-size: 1.2em !important;
   }
-
   body.show h1,
   body.gallery h1,
   body.error404 h1 {
     font-size: 3em !important;
   }
-
   body.gallery h2 {
     font-size: 1.1em !important;
   }
-
   .show-row {
     text-align: center;
     margin-left: 9em;
     margin-right: 9em;
   }
 }
-
 @media (max-width: 992px) {
   h1 {
     font-size: 4.5em !important;
   }
-
   h2 {
     font-size: 3em !important;
   }
-
   body.show h1,
   body.gallery h1,
   body.error404 h1 {
     font-size: 2.67em !important;
   }
-
   body.show h1 {
-    margin-top: .7em;
+    margin-top: 0.7em;
   }
-
   body.show p {
     font-size: 1em !important;
   }
-
   body.gallery h2 {
     font-size: 1.1em !important;
   }
-
   body.show img {
     height: 60vh;
     width: 100%;
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
-
   .show-row {
     text-align: center;
     margin-left: 8em;
     margin-right: 8em;
   }
 }
-
 @media (max-width: 768px) {
   h1 {
     font-size: 2.5em !important;
   }
-
   h2 {
     font-size: 2em !important;
   }
-
   body.show h1,
   body.gallery h1,
   body.error404 h1 {
     font-size: 2em !important;
   }
-
   body.show p {
-    font-size: .8em !important;
+    font-size: 0.8em !important;
   }
-
   body.gallery h2 {
     font-size: 1.1em !important;
   }
-
   .show-row {
     text-align: center;
     margin-left: 5em;
     margin-right: 5em;
   }
 }
-
 @media (max-width: 576px) {
   h1 {
     font-size: 2.5em !important;
   }
-
   h2 {
     font-size: 2em !important;
   }
-
   body.show h1,
   body.gallery h1,
   body.error404 h1 {
     font-size: 2em !important;
   }
-
   body.show p {
-    font-size: .8em !important;
+    font-size: 0.8em !important;
   }
-
   body.gallery h2 {
     font-size: 1.1em !important;
   }
-
   .show-row {
     text-align: center;
     margin-left: 4em;
     margin-right: 4em;
   }
 }
-
 /* new and edit views */
 body.edit {
   background-image: url("https://img.freepik.com/premium-photo/film-projector-film-director-s-chair-dark-place-3d-rendering_651547-474.jpg?size=626&ext=jpg&ga=GA1.1.1929040866.1695618859&semt=ais");
@@ -391,7 +358,7 @@ body.new label,
 body.edit label {
   font-size: 1em !important;
   color: rgb(244, 232, 207) !important;
-  text-shadow: 0 0 .3rem black;
+  text-shadow: 0 0 0.3rem #000;
 }
 
 /* forms on both new and edit */
@@ -401,11 +368,11 @@ form {
 }
 
 .form-control {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 1rem;
   padding: 0.5rem;
   border-radius: 0.25rem;
-  border: 1px solid #ced4da;
+  border: 1px solid #ccc;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
@@ -426,9 +393,9 @@ body.error404 {
 
 body.error404 h1 {
   color: rgb(244, 232, 207);
-  -webkit-text-stroke: 1px white;
+  -webkit-text-stroke: 1px #fff;
   font-size: 2.5em !important;
-  margin-top: -.9em;
+  margin-top: -0.9em;
 }
 
 @media (max-width: 768px) {
@@ -436,11 +403,10 @@ body.error404 h1 {
     font-size: 1.5em !important;
   }
 }
-
 /* navbar */
 .navbar {
   position: fixed;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 1.1em;
   font-style: italic;
   top: 0;
@@ -481,7 +447,7 @@ body.error404 h1 {
   border: 1px solid rgb(244, 232, 207) !important;
   cursor: pointer;
   font-size: 2.5rem;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
   transition: 0.3s ease-in-out;
   padding-bottom: 4px;
 }
@@ -489,15 +455,14 @@ body.error404 h1 {
 @media (max-width: 768px) {
   .btn-primary {
     font-size: 2em !important;
-    border-radius: .4em;
+    border-radius: 0.4em;
   }
 }
-
 .btn-primary:hover {
   transform: scale(1.05);
   background-color: green !important;
   color: rgb(244, 232, 207) !important;
-  text-shadow: 0 0 .25em rgb(244, 232, 207) !important;
+  text-shadow: 0 0 0.25em rgb(244, 232, 207) !important;
   transition: 0.3s ease-in-out;
 }
 
@@ -509,25 +474,25 @@ body.error404 h1 {
 
 /* edit (btn-warning) and delete (btn-danger) buttons */
 .edits {
-  margin-top: .3em;
+  margin-top: 0.3em;
   margin-bottom: 4em;
 }
 
 .btn-warning,
 .btn-danger {
-  border-radius: .5em;
-  margin-right: .2em;
-  margin-left: .2em;
+  border-radius: 0.5em;
+  margin-right: 0.2em;
+  margin-left: 0.2em;
   font-size: 1em;
-  border: 1px solid black !important;
+  border: 1px solid #000 !important;
 }
 
 .btn-danger {
-  color:  rgb(244, 232, 207) !important;
+  color: rgb(244, 232, 207) !important;
 }
 
 .btn-warning {
-  color: black !important;
+  color: #000 !important;
 }
 
 .btn-warning:hover,
@@ -539,7 +504,7 @@ body.error404 h1 {
 }
 
 .btn-danger:hover {
-  color: black !important;
+  color: #000 !important;
 }
 
 .btn-warning:hover {
@@ -570,7 +535,7 @@ a:hover {
   font-size: 1em;
   text-decoration: none;
   transition: color 0.3s ease;
-  text-shadow: 0 0 .9em rgb(244, 232, 207) !important;
+  text-shadow: 0 0 0.9em rgb(244, 232, 207) !important;
 }
 
 a:active {
@@ -591,9 +556,9 @@ a:active {
   width: 100%;
   height: 5em;
   line-height: 1em !important;
-  background: linear-gradient(to top, rgb(27, 23, 23), rgb(27, 23, 23) 90%, rgba(27, 23, 23, 0));
+  background: linear-gradient(to top, rgb(27, 27, 23), rgb(27, 27, 23) 90%, rgba(27, 27, 23, 0));
   color: rgb(244, 232, 207) !important;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 .sticky-footer a {
@@ -606,7 +571,7 @@ a:active {
 
 .sticky-footer a:hover {
   color: rgb(244, 232, 207) !important;
-  text-shadow: 0 0 .9em rgb(244, 232, 207) !important;
+  text-shadow: 0 0 0.9em rgb(244, 232, 207) !important;
   text-decoration: none;
   transition: 0.2s ease-in-out;
 }
@@ -617,7 +582,7 @@ a:active {
 
 .copyright {
   color: rgb(244, 232, 207) !important;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   padding-top: 11px;
 }
 
@@ -626,20 +591,19 @@ body.show .copyright,
 body.new .copyright,
 body.edit .copyright,
 body.error404 .copyright {
-  font-size: .8rem !important;
+  font-size: 0.8rem !important;
 }
 
 /* Media query for screens with a maximum width of 768 pixels */
 @media (max-width: 768px) {
   /* Adjust font size of footer text for smaller screens */
   .my-info {
-    font-size: .7rem;
+    font-size: 0.7rem;
   }
-
   body.home .copyright,
   body.show .copyright,
   body.new .copyright,
   body.edit .copyright {
-    font-size: .56rem !important;
+    font-size: 0.56rem !important;
   }
-}
+}/*# sourceMappingURL=style.css.map */
