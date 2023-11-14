@@ -1,5 +1,6 @@
 @import "config";
 @import "mixins";
+@import "functions";
 
 /* globals */
 html,
@@ -46,7 +47,7 @@ body {
 
   img {
     margin: auto;
-    width: 75%;
+    width: set-width(75) !important;
     vertical-align: top !important;
   }
 }
@@ -100,7 +101,7 @@ body.gallery {
 
   a img {
     padding-bottom: 7px;
-    transition: 0.3s ease-in-out !important;
+    @include transition();
   }
 
   a:hover img {
@@ -119,7 +120,7 @@ body.gallery {
   .col-lg-4 img,
   .col-xl-3 img,
   .col-xxl-2 img {
-    width: 100%;
+    width: set-width() !important;
     height: auto;
   }
 
@@ -149,11 +150,11 @@ body.show {
 
   .img-fluid {
     margin: auto;
-    width: 100%;
+    width: set-width() !important;
   }
 
   .col-md-4 img {
-    height: 70vh !important;
+    height: set-height(70) !important;
     object-fit: contain;
   }
 
@@ -182,7 +183,7 @@ body.show {
     }
   
     img {
-      height: 80vh;
+      height: set-height(80) !important;
     }
 
     .show-row {
@@ -226,14 +227,14 @@ body.show {
     }
   
     img {
-      height: 60vh;
-      width: 100%;
+      height: set-height(70) !important;
+      width: set-width() !important;
       object-fit: contain;
     }
   
     .col-md-4,
     .col-md-8 {
-      width: 50%;
+      width: set-width(50) !important;
     }
 
     .show-row {
@@ -245,7 +246,7 @@ body.show {
 
   @media (max-width: 992px) {
     .col-md-4 img {
-      height: 60vh !important;
+      height: set-height(60) !important;
       object-fit: contain;
     }
   }
@@ -264,7 +265,7 @@ body.show {
     }
   
     .col-md-4 img {
-      height: 50vh !important;
+      height: set-height(50) !important;
       object-fit: contain;
     }
 
@@ -358,7 +359,7 @@ body.error404 {
   font-style: italic;
   top: 0;
   left: 0;
-  width: 100%;
+  width: set-width() !important;
   z-index: 1;
   height: 4em !important;
   padding-top: 15px;
@@ -373,12 +374,12 @@ body.error404 {
   .nav-link {
     color: $light-orange !important;
     font-size: 1.2em !important;
-    transition: 0.3s ease-in-out !important;
+    @include transition();
 
     &:hover {
       color: $light-orange !important;
       text-decoration: none;
-      transition: 0.3s ease-in-out !important;
+      @include transition();
     }
   }
 
@@ -386,7 +387,7 @@ body.error404 {
     &:hover {
       color: $light-orange !important;
       text-decoration: none;
-      transition: 0.3s ease-in-out !important;
+      @include transition();
     }
   }
 }
@@ -402,21 +403,21 @@ body.error404 {
   cursor: pointer;
   font-size: 1.9rem;
   box-shadow: $box-shadow;
-  transition: 0.3s ease-in-out;
+  @include transition();
   padding-bottom: 4px;
 
   &:hover {
-    transform: scale(1.05);
+    @include scale-transform();
     background-color: $accent-green !important;
     color: $light-orange !important;
     text-shadow: 0 0 0.25em $light-orange !important;
-    transition: 0.3s ease-in-out;
+    @include transition();
   }
 
   &:active {
     background-color: $light-orange !important;
     color: $accent-green !important;
-    transition: 0.3s ease-in-out !important;
+    @include transition();
   }
 
   @media (max-width: 768px) {
@@ -441,7 +442,7 @@ body.error404 {
 
   &:active {
     background-color: $light-orange !important;
-    transition: 0.3s ease-in-out !important;
+    @include transition();
   }
 }
 
@@ -449,8 +450,8 @@ body.error404 {
   color: $light-orange !important;
 
   &:hover {
-    transform: scale(1.05);
-    transition: 0.3s ease-in-out;
+    @include scale-transform();
+    @include transition();
     border: 1px solid $light-orange !important;
     color: $black !important;
   }
@@ -460,8 +461,8 @@ body.error404 {
   color: $black !important;
 
   &:hover {
-    transform: scale(1.05);
-    transition: 0.3s ease-in-out;
+    @include scale-transform();
+    @include transition();
     border: 1px solid $light-orange !important;
     color: $light-orange !important;
     background-color: $warning !important;
@@ -474,7 +475,7 @@ a {
   &:visited {
     color: $light-orange;
     font-size: 1em;
-    transition: color 0.3s ease;
+    @include transition-color();
     text-decoration: none;
   }
 
@@ -482,7 +483,7 @@ a {
     color: $light-orange;
     font-size: 1em;
     text-decoration: none;
-    transition: color 0.3s ease;
+    @include transition-color();
     text-shadow: 0 0 0.9em $light-orange !important;
   }
 
@@ -502,7 +503,7 @@ a {
   justify-content: center;
   align-items: center;
   padding-top: 22px;
-  width: 100%;
+  width: set-width() !important;
   height: 5em;
   line-height: 1em !important;
   background: linear-gradient(
@@ -518,14 +519,14 @@ a {
     color: $light-orange !important;
     text-decoration: none;
     padding-bottom: 2px;
-    transition: 0.2s ease-in-out;
+    @include transition();
     margin-bottom: 0;
 
     &:hover {
       color: $light-orange !important;
       text-shadow: 0 0 0.9em $light-orange !important;
       text-decoration: none;
-      transition: 0.2s ease-in-out;
+      @include transition();
     }
   }
 
