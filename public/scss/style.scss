@@ -19,14 +19,12 @@ body {
   background-color: $black;
 
   h1 {
-    font-size: 5em;
     text-align: center;
     color: $light-orange;
     -webkit-text-stroke: 1px $white;
   }
 
   h2 {
-    font-size: 2em;
     color: $light-orange !important;
   }
 
@@ -72,7 +70,6 @@ body.home {
   }
 
   h2 {
-    font-size: 4.4em;
     color: $dark-orange !important;
     text-shadow: 0 0 0.3rem $black;
     -webkit-text-stroke: 1px $white;
@@ -125,18 +122,14 @@ body.gallery {
     width: 100%;
     height: auto;
   }
-}
 
-/* specific to gallery */
-.show-row {
-  background-color: $gallery-screen;
-}
+  .show-row {
+    background-color: $gallery-screen;
+  }
 
-/* applies to both gallery and show view */
-.row {
-  text-align: center;
-  margin-left: 5em;
-  margin-right: 5em;
+  .row {
+    @include centered-row;
+  }
 }
 
 /* show view */
@@ -170,51 +163,24 @@ body.show {
     font-size: 1.3rem;
   }
 
+  .row {
+    @include centered-row;
+  }
+
   /* different viewport size adjustments */
-  @media (min-width: 768px) {
-    .col-md-4,
-    .col-md-8 {
-      width: 50%;
-    }
-  }
-
-  @media (max-width: 992px) {
-    .col-md-4 img {
-      height: 60vh !important;
-      object-fit: contain;
-    }
-  }
-
-  @media (max-width: 767px) {
-    .col-md-4 img {
-      height: 50vh !important;
-      object-fit: contain;
-    }
-  }
-
   @media (min-width: 1401px) {
     h1 {
-      font-size: 5em !important;
-    }
-
-    h2 {
       font-size: 3.5em !important;
     }
-
-    h1,
-    h1,
-    body.error404 h1 {
-      font-size: 3.5em !important;
-    }
-
+  
     h2 {
       font-size: 1.1em !important;
     }
-
+  
     p {
       font-size: 1.5em !important;
     }
-
+  
     img {
       height: 80vh;
     }
@@ -226,29 +192,19 @@ body.show {
     }
   }
 
-  @media (max-width: 1400px) {
+  @media (min-width: 992px) {
     h1 {
-      font-size: 4.5em !important;
-    }
-
-    h2 {
       font-size: 3em !important;
     }
-
-    p {
-      font-size: 1.2em !important;
-    }
-
-    h1,
-    h1,
-    body.error404 h1 {
-      font-size: 3em !important;
-    }
-
+  
     h2 {
       font-size: 1.1em !important;
     }
-
+  
+    p {
+      font-size: 1.2em !important;
+    }
+  
     .show-row {
       text-align: center;
       margin-left: 9em;
@@ -256,37 +212,28 @@ body.show {
     }
   }
 
-  @media (max-width: 992px) {
+  @media (min-width: 768px) {
     h1 {
-      font-size: 4.5em !important;
-    }
-
-    h2 {
-      font-size: 3em !important;
-    }
-
-    h1,
-    h1,
-    body.error404 h1 {
       font-size: 2.67em !important;
     }
-
-    h1 {
-      margin-top: 0.7em;
-    }
-
-    p {
-      font-size: 1em !important;
-    }
-
+  
     h2 {
       font-size: 1.1em !important;
     }
-
+  
+    p {
+      font-size: 1em !important;
+    }
+  
     img {
       height: 60vh;
       width: 100%;
       object-fit: contain;
+    }
+  
+    .col-md-4,
+    .col-md-8 {
+      width: 50%;
     }
 
     .show-row {
@@ -296,27 +243,29 @@ body.show {
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
+    .col-md-4 img {
+      height: 60vh !important;
+      object-fit: contain;
+    }
+  }
+
+  @media (max-width: 767px) {
     h1 {
-      font-size: 2.5em !important;
+      font-size: 2em !important;
     }
-
+  
     h2 {
-      font-size: 2em !important;
+      font-size: 1.1em !important;
     }
-
-    h1,
-    h1,
-    body.error404 h1 {
-      font-size: 2em !important;
-    }
-
+  
     p {
       font-size: 0.8em !important;
     }
-
-    h2 {
-      font-size: 1.1em !important;
+  
+    .col-md-4 img {
+      height: 50vh !important;
+      object-fit: contain;
     }
 
     .show-row {
@@ -326,29 +275,19 @@ body.show {
     }
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 567px) {
     h1 {
-      font-size: 2.5em !important;
-    }
-
-    h2 {
       font-size: 2em !important;
     }
-
-    h1,
-    h1,
-    body.error404 h1 {
-      font-size: 2em !important;
-    }
-
-    p {
-      font-size: 0.8em !important;
-    }
-
+  
     h2 {
       font-size: 1.1em !important;
     }
-
+  
+    p {
+      font-size: 0.8em !important;
+    }
+  
     .show-row {
       text-align: center;
       margin-left: 4em;
@@ -461,7 +400,7 @@ body.error404 {
   border-radius: 1rem;
   border: 1px solid $light-orange !important;
   cursor: pointer;
-  font-size: 2.5rem;
+  font-size: 1.9rem;
   box-shadow: $box-shadow;
   transition: 0.3s ease-in-out;
   padding-bottom: 4px;
@@ -598,29 +537,17 @@ a {
     color: $light-orange !important;
     font-family: $font-stack;
     padding-top: 11px;
+    font-size: 0.8rem !important;
 
     @media (max-width: 768px) {
       font-size: 0.56rem !important;
     }
   }
-}
-
-body.home .copyright,
-.copyright,
-body.new .copyright,
-body.edit .copyright,
-body.error404 .copyright {
-  font-size: 0.8rem !important;
 
   @media (max-width: 768px) {
-    font-size: 0.56rem !important;
-  }
-}
-
-/* Media query for screens with a maximum width of 768 pixels */
-@media (max-width: 768px) {
-  /* Adjust font size of footer text for smaller screens */
-  .my-info {
-    font-size: 0.7rem;
+    /* Adjust font size of footer text for smaller screens */
+    .my-info {
+      font-size: 0.7rem;
+    }
   }
 }
