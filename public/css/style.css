@@ -1,4 +1,9 @@
 /* globals */
+html,
+body {
+  height: 100%;
+}
+
 body {
   margin-top: 6em;
   display: flex;
@@ -10,31 +15,22 @@ body {
   text-shadow: 0 0 0.2rem #fff;
   background-color: #000;
 }
-
-html,
-body {
-  height: 100%;
-}
-
-h1 {
+body h1 {
   font-size: 5em;
   text-align: center;
   color: rgb(244, 232, 207);
   -webkit-text-stroke: 1px #fff;
 }
-
-h2 {
+body h2 {
   font-size: 2em;
   color: rgb(244, 232, 207) !important;
 }
-
-h3,
-h4 {
+body h3,
+body h4 {
   font-family: "Lato", sans-serif;
   font-size: 0.7em;
 }
-
-p {
+body p {
   font-family: "Lato", sans-serif;
   color: rgb(244, 232, 207);
   font-weight: normal;
@@ -43,8 +39,7 @@ p {
   line-height: 1em;
   text-shadow: 0 0 0.3rem #000;
 }
-
-img {
+body img {
   margin: auto;
   width: 75%;
   vertical-align: top !important;
@@ -330,7 +325,6 @@ body.edit {
   background-attachment: fixed;
   overflow: hidden;
 }
-
 body.new {
   background-image: url(https://img.freepik.com/free-photo/movie-background-collage_23-2149876028.jpg?w=1380&t=st=1696097277~exp=1696097877~hmac=c53af1a166cae1127abc926ab789ae4ec74cadbebae5cc4d4179091855be1bc1);
   background-size: cover;
@@ -339,9 +333,7 @@ body.new {
   background-attachment: fixed;
   overflow: hidden;
 }
-
-body.new label,
-body.edit label {
+body.new label, body.edit label {
   font-size: 1em !important;
   color: rgb(244, 232, 207) !important;
   text-shadow: 0 0 0.3rem #000;
@@ -352,8 +344,7 @@ form {
   max-width: 600px !important;
   margin: 0 auto;
 }
-
-.form-control {
+form .form-control {
   font-family: "Lato", sans-serif;
   font-size: 1rem;
   padding: 0.5rem;
@@ -361,8 +352,7 @@ form {
   border: 1px solid #ccc;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-
-.form-control:focus {
+form .form-control:focus {
   border-color: #80bdff;
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
@@ -376,19 +366,18 @@ body.error404 {
   background-attachment: fixed;
   overflow: hidden;
 }
-
 body.error404 h1 {
   color: rgb(244, 232, 207);
   -webkit-text-stroke: 1px #fff;
   font-size: 2.5em !important;
   margin-top: -0.9em;
 }
-
 @media (max-width: 768px) {
   body.error404 h1 {
     font-size: 1.5em !important;
   }
 }
+
 /* navbar */
 .navbar {
   position: fixed;
