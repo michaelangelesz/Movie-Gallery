@@ -16,13 +16,11 @@ body {
   background-color: #000;
 }
 body h1 {
-  font-size: 5em;
   text-align: center;
   color: rgb(244, 232, 207);
   -webkit-text-stroke: 1px #fff;
 }
 body h2 {
-  font-size: 2em;
   color: rgb(244, 232, 207) !important;
 }
 body h3,
@@ -68,7 +66,6 @@ body.home h1 {
   margin-top: 0.5em;
 }
 body.home h2 {
-  font-size: 4.4em;
   color: #ed8d00 !important;
   text-shadow: 0 0 0.3rem #000;
   -webkit-text-stroke: 1px #fff;
@@ -118,14 +115,10 @@ body.gallery .col-xxl-2 img {
   width: 100%;
   height: auto;
 }
-
-/* specific to gallery */
-.show-row {
+body.gallery .show-row {
   background-color: rgba(22, 22, 22, 0.65);
 }
-
-/* applies to both gallery and show view */
-.row {
+body.gallery .row {
   text-align: center;
   margin-left: 5em;
   margin-right: 5em;
@@ -163,36 +156,13 @@ body.show .col-md-8 {
   padding: 0.75rem;
   font-size: 1.3rem;
 }
-@media (min-width: 768px) {
-  body.show .col-md-4,
-  body.show .col-md-8 {
-    width: 50%;
-  }
-}
-@media (max-width: 992px) {
-  body.show .col-md-4 img {
-    height: 60vh !important;
-    -o-object-fit: contain;
-       object-fit: contain;
-  }
-}
-@media (max-width: 767px) {
-  body.show .col-md-4 img {
-    height: 50vh !important;
-    -o-object-fit: contain;
-       object-fit: contain;
-  }
+body.show .row {
+  text-align: center;
+  margin-left: 5em;
+  margin-right: 5em;
 }
 @media (min-width: 1401px) {
   body.show h1 {
-    font-size: 5em !important;
-  }
-  body.show h2 {
-    font-size: 3.5em !important;
-  }
-  body.show h1,
-  body.show h1,
-  body.show body.error404 h1 {
     font-size: 3.5em !important;
   }
   body.show h2 {
@@ -210,23 +180,15 @@ body.show .col-md-8 {
     margin-right: 10em;
   }
 }
-@media (max-width: 1400px) {
+@media (min-width: 992px) {
   body.show h1 {
-    font-size: 4.5em !important;
-  }
-  body.show h2 {
-    font-size: 3em !important;
-  }
-  body.show p {
-    font-size: 1.2em !important;
-  }
-  body.show h1,
-  body.show h1,
-  body.show body.error404 h1 {
     font-size: 3em !important;
   }
   body.show h2 {
     font-size: 1.1em !important;
+  }
+  body.show p {
+    font-size: 1.2em !important;
   }
   body.show .show-row {
     text-align: center;
@@ -234,26 +196,15 @@ body.show .col-md-8 {
     margin-right: 9em;
   }
 }
-@media (max-width: 992px) {
+@media (min-width: 768px) {
   body.show h1 {
-    font-size: 4.5em !important;
-  }
-  body.show h2 {
-    font-size: 3em !important;
-  }
-  body.show h1,
-  body.show h1,
-  body.show body.error404 h1 {
     font-size: 2.67em !important;
-  }
-  body.show h1 {
-    margin-top: 0.7em;
-  }
-  body.show p {
-    font-size: 1em !important;
   }
   body.show h2 {
     font-size: 1.1em !important;
+  }
+  body.show p {
+    font-size: 1em !important;
   }
   body.show img {
     height: 60vh;
@@ -261,29 +212,37 @@ body.show .col-md-8 {
     -o-object-fit: contain;
        object-fit: contain;
   }
+  body.show .col-md-4,
+  body.show .col-md-8 {
+    width: 50%;
+  }
   body.show .show-row {
     text-align: center;
     margin-left: 8em;
     margin-right: 8em;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
+  body.show .col-md-4 img {
+    height: 60vh !important;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+@media (max-width: 767px) {
   body.show h1 {
-    font-size: 2.5em !important;
+    font-size: 2em !important;
   }
   body.show h2 {
-    font-size: 2em !important;
-  }
-  body.show h1,
-  body.show h1,
-  body.show body.error404 h1 {
-    font-size: 2em !important;
+    font-size: 1.1em !important;
   }
   body.show p {
     font-size: 0.8em !important;
   }
-  body.show h2 {
-    font-size: 1.1em !important;
+  body.show .col-md-4 img {
+    height: 50vh !important;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   body.show .show-row {
     text-align: center;
@@ -291,23 +250,15 @@ body.show .col-md-8 {
     margin-right: 5em;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 567px) {
   body.show h1 {
-    font-size: 2.5em !important;
-  }
-  body.show h2 {
     font-size: 2em !important;
-  }
-  body.show h1,
-  body.show h1,
-  body.show body.error404 h1 {
-    font-size: 2em !important;
-  }
-  body.show p {
-    font-size: 0.8em !important;
   }
   body.show h2 {
     font-size: 1.1em !important;
+  }
+  body.show p {
+    font-size: 0.8em !important;
   }
   body.show .show-row {
     text-align: center;
@@ -422,7 +373,7 @@ body.error404 h1 {
   border-radius: 1rem;
   border: 1px solid rgb(244, 232, 207) !important;
   cursor: pointer;
-  font-size: 2.5rem;
+  font-size: 1.9rem;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
   transition: 0.3s ease-in-out;
   padding-bottom: 4px;
@@ -543,34 +494,18 @@ a:active {
   color: rgb(244, 232, 207) !important;
   font-family: "Lato", sans-serif;
   padding-top: 11px;
+  font-size: 0.8rem !important;
 }
 @media (max-width: 768px) {
   .sticky-footer .copyright {
     font-size: 0.56rem !important;
   }
 }
-
-body.home .copyright,
-.copyright,
-body.new .copyright,
-body.edit .copyright,
-body.error404 .copyright {
-  font-size: 0.8rem !important;
-}
 @media (max-width: 768px) {
-  body.home .copyright,
-  .copyright,
-  body.new .copyright,
-  body.edit .copyright,
-  body.error404 .copyright {
-    font-size: 0.56rem !important;
+  .sticky-footer {
+    /* Adjust font size of footer text for smaller screens */
   }
-}
-
-/* Media query for screens with a maximum width of 768 pixels */
-@media (max-width: 768px) {
-  /* Adjust font size of footer text for smaller screens */
-  .my-info {
+  .sticky-footer .my-info {
     font-size: 0.7rem;
   }
 }/*# sourceMappingURL=style.css.map */

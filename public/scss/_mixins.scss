@@ -10,3 +10,9 @@
     @include scrolling-background-properties($background-image);
     overflow: hidden;
 }
+
+@mixin centered-row {
+    text-align: center;
+    margin-left: 5em;
+    margin-right: 5em;
+}
