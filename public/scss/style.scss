@@ -1,4 +1,5 @@
 @import 'config';
+@import 'mixins';
 
 /* globals */
 body {
@@ -85,11 +86,7 @@ body.home h2 {
 
 /* gallery view */
 body.gallery {
-  background-image: url(#{ $gallery-background });
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
+  @include scrolling-background-properties($gallery-background);
 }
 
 body.gallery h1 {
@@ -149,11 +146,7 @@ a:hover img {
 
 /* show view */
 body.show {
-  background-image: url(#{ $show-background });
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
+  @include scrolling-background-properties($show-background);
 }
 
 body.show h1 {
@@ -372,21 +365,11 @@ body.show p {
 
 /* new and edit views */
 body.edit {
-  background-image: url(#{ $edit-background });
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom center;
-  background-attachment: fixed;
-  overflow: hidden;
+  @include overflow-hidden-views($edit-background);
 }
 
 body.new {
-  background-image: url(#{ $new-background });
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom center;
-  background-attachment: fixed;
-  overflow: hidden;
+  @include overflow-hidden-views($new-background);
 }
 
 body.new label,
@@ -418,13 +401,17 @@ form {
 
 /* error404 view */
 body.error404 {
-  background-image: url(#{ $error-404 });
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  overflow: hidden;
+  @include overflow-hidden-views($error-404);
 }
+
+// body.error404 {
+//   background-image: url(#{ $error-404 });
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-attachment: fixed;
+//   overflow: hidden;
+// }
 
 body.error404 h1 {
   color: $light-orange;
