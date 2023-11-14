@@ -2,6 +2,11 @@
 @import "mixins";
 
 /* globals */
+html,
+body {
+  height: 100%;
+}
+
 body {
   margin-top: 6em;
   display: flex;
@@ -12,45 +17,40 @@ body {
   color: $light-orange;
   text-shadow: 0 0 0.2rem $white;
   background-color: $black;
-}
 
-html,
-body {
-  height: 100%;
-}
+  h1 {
+    font-size: 5em;
+    text-align: center;
+    color: $light-orange;
+    -webkit-text-stroke: 1px $white;
+  }
 
-h1 {
-  font-size: 5em;
-  text-align: center;
-  color: $light-orange;
-  -webkit-text-stroke: 1px $white;
-}
+  h2 {
+    font-size: 2em;
+    color: $light-orange !important;
+  }
 
-h2 {
-  font-size: 2em;
-  color: $light-orange !important;
-}
+  h3,
+  h4 {
+    font-family: $font-stack;
+    font-size: 0.7em;
+  }
 
-h3,
-h4 {
-  font-family: $font-stack;
-  font-size: 0.7em;
-}
+  p {
+    font-family: $font-stack;
+    color: $light-orange;
+    font-weight: normal;
+    letter-spacing: 0.03em;
+    font-size: 0.7em !important;
+    line-height: 1em;
+    text-shadow: 0 0 0.3rem $black;
+  }
 
-p {
-  font-family: $font-stack;
-  color: $light-orange;
-  font-weight: normal;
-  letter-spacing: 0.03em;
-  font-size: 0.7em !important;
-  line-height: 1em;
-  text-shadow: 0 0 0.3rem $black;
-}
-
-img {
-  margin: auto;
-  width: 75%;
-  vertical-align: top !important;
+  img {
+    margin: auto;
+    width: 75%;
+    vertical-align: top !important;
+  }
 }
 
 /* home view */
@@ -358,65 +358,56 @@ body.show {
 }
 
 /* new and edit views */
-body.edit {
-  @include overflow-hidden-views($edit-background);
-}
+body {
+  &.edit {
+    @include overflow-hidden-views($edit-background);
+  }
 
-body.new {
-  @include overflow-hidden-views($new-background);
-}
+  &.new {
+    @include overflow-hidden-views($new-background);
+  }
 
-body.new label,
-body.edit label {
-  font-size: 1em !important;
-  color: $light-orange !important;
-  text-shadow: 0 0 0.3rem $black;
+  &.new label,
+  &.edit label {
+    font-size: 1em !important;
+    color: $light-orange !important;
+    text-shadow: 0 0 0.3rem $black;
+  }
 }
 
 /* forms on both new and edit */
 form {
   max-width: 600px !important;
   margin: 0 auto;
-}
 
-.form-control {
-  font-family: $font-stack;
-  font-size: 1rem;
-  padding: 0.5rem;
-  border-radius: 0.25rem;
-  border: $form-border;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
+  .form-control {
+    font-family: $font-stack;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: $form-border;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
-.form-control:focus {
-  border-color: $focus-border;
-  box-shadow: $focus-box-shadow;
+    &:focus {
+      border-color: $focus-border;
+      box-shadow: $focus-box-shadow;
+    }
+  }
 }
 
 /* error404 view */
 body.error404 {
   @include overflow-hidden-views($error-404);
-}
 
-// body.error404 {
-//   background-image: url(#{ $error-404 });
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   background-position: center;
-//   background-attachment: fixed;
-//   overflow: hidden;
-// }
+  h1 {
+    color: $light-orange;
+    -webkit-text-stroke: 1px $white;
+    font-size: 2.5em !important;
+    margin-top: -0.9em;
 
-body.error404 h1 {
-  color: $light-orange;
-  -webkit-text-stroke: 1px $white;
-  font-size: 2.5em !important;
-  margin-top: -0.9em;
-}
-
-@media (max-width: 768px) {
-  body.error404 h1 {
-    font-size: 1.5em !important;
+    @media (max-width: 768px) {
+      font-size: 1.5em !important;
+    }
   }
 }
 
