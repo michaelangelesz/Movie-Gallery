@@ -502,9 +502,6 @@ a:active {
   }
 }
 @media (max-width: 768px) {
-  .sticky-footer {
-    /* Adjust font size of footer text for smaller screens */
-  }
   .sticky-footer .my-info {
     font-size: 0.7rem;
   }
