@@ -1,7 +1,7 @@
-const React = require("react")
-const Default = require("./default")
+import React from 'react';
+import Default from './default';
 
-function Home() {
+const Home: React.FC = () => {
   return (
     <Default title="Welcome Page">
       <body className="home">
@@ -12,7 +12,7 @@ function Home() {
         </a>
       </body>
     </Default>
-  )
-}
+  );
+};
 
-module.exports = Home
+export default Home;
